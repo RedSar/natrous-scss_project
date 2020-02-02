@@ -1,0 +1,15 @@
+{
+  "name": "natrous",
+  "version": "1.0.0",
+  "description": "Landing page for nature tours website.",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "keywords": [],
+  "author": "Redouane",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
