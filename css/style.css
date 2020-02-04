@@ -88,19 +88,22 @@ body {
     margin-bottom: 3rem; }
 
 .u-center-text {
-  text-align: center; }
+  text-align: center !important; }
 
 .u-mb-lg {
-  margin-bottom: 8rem; }
+  margin-bottom: 8rem !important; }
 
 .u-mt-lg {
-  margin-top: 8rem; }
+  margin-top: 8rem !important; }
+
+.u-mt-md {
+  margin-top: 4rem !important; }
 
 .u-mb-md {
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem !important; }
 
 .u-mb-sm {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem !important; }
 
 .section-about {
   background-color: #f7f7f7;
@@ -125,7 +128,21 @@ body {
   padding: 15rem 0;
   position: relative; }
 
-.btn:link, .btn:visited {
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+
+.book {
+  height: 55rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  background-size: cover;
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 49.9%, transparent 50%), url(../img/nat-10.jpg); }
+  .book__form {
+    padding: 6rem;
+    width: 50%;
+    height: 100%; }
+
+.btn, .btn:link, .btn:visited {
   text-decoration: none;
   padding: 1.5rem 4rem;
   border-radius: 10rem;
@@ -133,7 +150,9 @@ body {
   text-transform: uppercase;
   transition: all 0.1s;
   position: relative;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  cursor: pointer;
+  border: none; }
 
 .btn--white {
   background: #fff;
@@ -154,9 +173,10 @@ body {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
 
-.btn:active {
+.btn:active, .btn:focus {
   transform: translateY(-0.1rem);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  outline: none; }
 
 .btn::after {
   content: '';
@@ -388,6 +408,80 @@ body {
     height: 100%;
     object-fit: cover; }
 
+.form__group:not(:last-child) {
+  margin-bottom: 3rem; }
+
+.form__input {
+  display: block;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  width: 90%;
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  border-bottom: 3px solid transparent;
+  transition: all 0.4s; }
+  .form__input:focus {
+    outline: none;
+    border-bottom: 3px solid #55c57a; }
+    .form__input:focus:invalid {
+      border-bottom: 3px solid #ff7730; }
+  .form__input::-webkit-input-placeholder {
+    color: #ccc; }
+
+.form__label {
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: block;
+  transition: all 0.3s; }
+
+.form__input:placeholder-shown + .form__label {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-4.2rem); }
+
+.form__radio-group {
+  display: inline-block;
+  width: 49%; }
+
+.form__radio-button {
+  display: inline-block;
+  border: 5px solid #55c57a;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  position: absolute;
+  top: -.4rem;
+  left: -2rem; }
+  .form__radio-button::after {
+    content: "";
+    display: block;
+    height: 1.4rem;
+    width: 1.4rem;
+    border-radius: 50%;
+    background-color: #55c57a;
+    opacity: 0;
+    transition: opacity .2s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+  opacity: 1; }
+
+.form__radio-label {
+  font-size: 1.6rem;
+  padding-left: 1.5rem;
+  cursor: pointer;
+  position: relative; }
+
+.form__radio-input {
+  visibility: hidden; }
+
 /* Header */
 .header {
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
@@ -408,6 +502,47 @@ body {
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%); }
+
+.footer {
+  background-color: #333;
+  height: 35rem;
+  color: #fff;
+  font-size: 1.4rem; }
+  .footer__logo-box {
+    margin: 0 auto;
+    padding: 6rem;
+    width: 25rem;
+    text-align: center; }
+  .footer__logo {
+    width: 100%;
+    height: auto; }
+  .footer__list {
+    list-style: none;
+    font-size: 1.6rem; }
+  .footer__item {
+    float: left;
+    border-top: 2px solid #777;
+    display: inline-block;
+    padding-top: 2rem; }
+    .footer__item:not(:last-child) {
+      padding-right: 2rem; }
+  .footer__link {
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: all .2s ease;
+    backface-visibility: hidden; }
+    .footer__link:link, .footer__link:visited {
+      color: #fff; }
+    .footer__link:hover, .footer__link:active {
+      color: #55c57a;
+      transform: rotateZ(7deg) scale(1.1);
+      background-color: #333;
+      box-shadow: 0 0.5rem 3rem #000; }
+  .footer__copyright {
+    border-top: 2px solid #777;
+    padding-top: 2rem; }
 
 .row {
   max-width: 114rem;

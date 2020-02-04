@@ -13,6 +13,13 @@
 		<title>Natours | Exciting tours for adventurous people</title>
 	</head>
 	<body>
+
+		<!-- Menu -->
+		<div class="navigation">
+			<input type="checkbox" name="menu" id="menu" class="navigation__checkbox">
+		</div>
+
+		<!-- HEADER -->
 		<header class="header">
 			<div class="header__logo-box"><img src="img/logo-white.png" alt="logo" class="header__logo"></div>
 			<div class="header__text-box">
@@ -27,6 +34,8 @@
 
 
 		<main>
+
+			<!-- About section -->
 			<section class="section-about" id="about">
 				<div class="u-center-text u-mb-lg">
 					<h2 class="heading-secondary ">Exciting Tours For Adventurous People</h2>
@@ -49,6 +58,9 @@
 				</div>
 
 			</section>
+
+
+			<!-- Features secion -->
 
 			<section class="section-features" id="features">
 				<div class="row">
@@ -86,6 +98,8 @@
 					</div>
 				</div>
 			</section>
+
+			<!-- Tours section -->
 			<section class="section-tours" id="tours">
 				<div class="u-center-text u-mb-lg">
 					<h2 class="heading-secondary">Most poupular tours</h2>
@@ -184,6 +198,7 @@
 				</div>
 			</section>
 
+			<!-- Story section -->
 			<section class="section-stories" id="stories">
 				<div class="bg-video">
 					<video class="bg-video__content" autoplay loop muted>
@@ -227,6 +242,70 @@
 				</div>
 
 			</section>
+
+			<!-- Book section -->
+			<section class="section-book" id="book">
+				<div class="row">
+					<div class="book">
+						<div class="book__form">
+							<div class="u-mb-md">
+								<h2 class="heading-secondary">Start booking now</h2>
+							</div>
+							<form action="#" class="form">
+								<div class="form__group">
+									<input type="text" class="form__input" id="name" placeholder="Full Name" name="name" required>
+									<label for="name" class="form__label">Full Name</label>
+								</div>
+								<div class="form__group">
+									<input type="email" class="form__input" id="email" placeholder="Email address" name="email" required>
+									<label for="email" class="form__label">Email address</label>
+								</div>
+								<div class="form__group u-mb-md">
+									<div class="form__radio-group">
+										<input type="radio" id="small" name="size" value="small" class="form__radio-input">
+										<label for="small" class="form__radio-label"> 
+											<span class="form__radio-button"></span>
+											Small tour group</label>
+									</div>
+									<div class="form__radio-group">
+										<input type="radio" id="large" name="size" value="large" class="form__radio-input">
+										<label for="large" class="form__radio-label"> 
+											<span class="form__radio-button"></span>
+											Large tour group</label>
+									</div>
+								</div>
+								<div class="u-mt-md">
+									<button type="submit" class="btn btn--green">
+										Next Step &rarr;
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
+
+		<!-- FOOTER -->
+
+		<footer class="footer">
+			<div class="footer__logo-box">
+				<img src="img/logo-green-2x.png" alt="full logo" class="footer__logo">
+			</div>
+			<div class="row">
+				<div class="col-1-of-2">
+					<ul class="footer__list">
+						<li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+						<li class="footer__item"><a href="#" class="footer__link">Contact Us</a></li>
+						<li class="footer__item"><a href="#" class="footer__link">Carrers</a></li>
+						<li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
+						<li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+					</ul>
+				</div>
+				<div class="col-1-of-2"><p class="footer__copyright">
+					Built by <a href="#" class="footer__link">REDOUANE GUERCHAL</a>, designed by Mr <a href="#" class="footer__link">JONAS SCHMEDTMANN</a>  <br> <a href="#" class="footer__link">Natours</a> &copy;2020
+				</p></div>
+			</div>
+		</footer>
 	</body>
 </html></html>
